@@ -1,0 +1,9 @@
+<form [formGroup]="typeAheadForm">
+    Get Continents
+    <input formControlName="search" placeholder="Start Typing Continent name">
+</form>
+<hr/>
+<ul *ngIf="(selectedContinents$ | async) as continents">
+    <li *ngFor="let continent of continents"> {{continent}}  </li>
+</ul>
+
